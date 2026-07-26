@@ -28,28 +28,23 @@
   .hero {
     background:linear-gradient(160deg,#0f4a4d 0%,#0a3a3d 55%,#0a2e30 100%);
     display:flex; flex-direction:column; align-items:center; text-align:center;
-    padding:44px 20px 34px; position:relative; overflow:hidden;
+    padding:56px 20px 42px; position:relative; overflow:hidden;
   }
   .hero::before {
     content:''; position:absolute; top:-40%; left:50%; transform:translateX(-50%);
     width:420px; height:420px; border-radius:50%;
-    background:radial-gradient(circle, rgba(200,160,60,0.16) 0%, transparent 68%);
+    background:radial-gradient(circle, rgba(200,160,60,0.14) 0%, transparent 68%);
     pointer-events:none;
   }
   .hero-logo {
-    width:100px; height:100px; border-radius:50%; overflow:hidden;
+    width:116px; height:116px; border-radius:50%; overflow:hidden;
     border:2px solid var(--gold); background:var(--dark2);
-    box-shadow:0 6px 24px rgba(0,0,0,0.35);
-    margin-bottom:16px; position:relative; z-index:1;
+    box-shadow:0 8px 28px rgba(0,0,0,0.4);
+    margin-bottom:22px; position:relative; z-index:1;
   }
   .hero-logo img { width:100%; height:100%; object-fit:cover; transform:scale(1.16); display:block; }
-  .hero-badge {
-    display:inline-block; font-size:10px; font-weight:500; letter-spacing:2px;
-    text-transform:uppercase; color:var(--gold); border:1px solid rgba(200,160,60,0.4);
-    padding:4px 10px; border-radius:2px; margin-bottom:12px; position:relative; z-index:1;
-  }
-  .hero h1 { font-family:'Playfair Display',serif; font-size:32px; font-weight:700; line-height:1.1; position:relative; z-index:1; }
-  .hero-sub { font-size:12px; color:var(--white2); margin-top:5px; position:relative; z-index:1; letter-spacing:0.3px; }
+  .hero h1 { font-family:'Playfair Display',serif; font-size:33px; font-weight:700; line-height:1.1; position:relative; z-index:1; letter-spacing:0.3px; }
+  .hero-sub { font-size:11px; color:var(--white2); margin-top:10px; position:relative; z-index:1; letter-spacing:1.8px; text-transform:uppercase; }
   .hero-divider { position:relative; height:1px; background:linear-gradient(90deg,transparent,rgba(200,160,60,0.5),transparent); }
   .hero-divider span {
     position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
@@ -193,7 +188,6 @@
 
 <div class="hero">
   <div class="hero-logo"><img src="logo-icon.png" alt="Casablanca"></div>
-  <div class="hero-badge">Marcações Online</div>
   <h1 onclick="location.reload()" style="cursor:pointer">Casablanca</h1>
   <div class="hero-sub" id="heroSub">A carregar...</div>
 </div>

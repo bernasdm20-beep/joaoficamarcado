@@ -66,13 +66,6 @@
     <a href="https://casablanca.ficamarcado.com" class="btn">Voltar à página inicial</a>
   </div>
 
-  <div id="stateExpired" class="hidden">
-    <div class="icon icon-error">⏱</div>
-    <h1>Prazo expirado</h1>
-    <p>Não confirmaste a tempo (10 minutos). Por favor, faz a marcação novamente.</p>
-    <a href="https://casablanca.ficamarcado.com" class="btn">Marcar novamente</a>
-  </div>
-
   <div id="stateError" class="hidden">
     <div class="icon icon-error">✕</div>
     <h1>Link inválido</h1>
@@ -86,10 +79,10 @@
 </div>
 
 <script>
-var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwkvudotX0EpSuAZqq6X9tTUBs4fNDo73HEBU-k7s0LfT9t6AkVkHPMPhgyDApSFANtuw/exec';
+var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw-U6PEEZdpyG0mhSCM2n7dnZAzv6Is40t70Bqm0CklWK2NOz0PC-RpjXmZBcS0ShTqEA/exec';
 
 function show(id) {
-  ['stateLoading','stateSuccess','stateAlready','stateCanceled','stateExpired','stateError'].forEach(function(s) {
+  ['stateLoading','stateSuccess','stateAlready','stateCanceled','stateError'].forEach(function(s) {
     document.getElementById(s).classList.toggle('hidden', s !== id);
   });
 }
@@ -115,8 +108,6 @@ if (!id) {
         show('stateAlready');
       } else if (res.status === 'cancelado') {
         show('stateCanceled');
-      } else if (res.status === 'expirado') {
-        show('stateExpired');
       } else {
         show('stateError');
       }
